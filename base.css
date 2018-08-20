@@ -1,0 +1,39 @@
+@import 'reset.css';
+@import 'app.css';
+/* base - loader css */
+html, body { width: 100%; height: 100%; }
+
+/* loader css */
+div.loader { 
+	width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;
+	background-color: #101114; flex-flow: column nowrap; font-family: Verdana;
+}
+div.loader p { font-family: 1.1em; font-weight: bold; color:white;}
+div.loader ul { height: 60px; }
+
+div.loader li:nth-child(1) > div.box{ animation-delay: 0ms;}
+div.loader li:nth-child(2) > div.box{ animation-delay: 200ms; }
+div.loader li:nth-child(3) > div.box{ animation-delay: 400ms; }
+div.loader li:nth-child(4) > div.box{ animation-delay: 600ms; }
+div.loader li:nth-child(5) > div.box{ animation-delay: 800ms; }
+div.loader li:nth-child(6) > div.box{ animation-delay: 1000ms; }
+div.loader li:nth-child(7) > div.box{ animation-delay: 1200ms; }
+div.loader li:nth-child(8) > div.box{ animation-delay: 1400ms; }
+div.loader li:nth-child(9) > div.box{ animation-delay: 1600ms; }
+div.loader li:nth-child(10) > div.box{ animation-delay: 1800ms; }
+
+div.loader li { 
+	width: 40px; height: 40px;margin: 20px;  float: left; 
+	display: flex; justify-content: center; align-items: center;
+}
+div.loader div.box { 
+	transform: rotate(45deg); background-color: white; width: 10px; height: 10px;
+	animation-name: expanse;
+	animation-duration: 2000ms;
+	animation-iteration-count: infinite;
+}
+
+@keyframes expanse { 
+	25%, 75% { width: 10px; height: 10px; }
+	0%,100% { width: 40px; height: 40px; }
+}

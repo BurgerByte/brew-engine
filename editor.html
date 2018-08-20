@@ -1,0 +1,116 @@
+<div class='flex-c full app'>
+	<div class='taskbar flex-r'>
+		<p id='menu-btn'>Menu</p>
+		<p id='project-name' class='flex-r grow jc'></p>
+	</div>
+
+	<!-- Panels -->
+	<div class='flex-r grow'>
+
+	<!-- overlay section -->
+	<div class='over-pane'>
+		<div class='overlay'></div>
+		<div class='attention flex-r'>
+			<p id='attention'></p>
+			<p>x</p>
+		</div>
+		<div class='prompt flex-c'>
+			<h1 id='prompt-header'>Panel-Name-Here</h1>
+			<div class='content flex-c grow'></div>
+		</div>
+	</div>
+
+	<!-- hidden menu -->
+	<div id='menu'>
+		<div class='section'>
+			<h1>Project</h1>
+			<p id='new-prj'>New</p>
+			<p id='load-prj'>Load</p>
+			<p>Save</p>
+			<p>Delete</p>
+		</div>
+		<div class='section'>
+			<h1>Scene</h1>
+			<p id='new-scn'>New</p>
+			<p>Delete</p>
+		</div>
+		<div class='section'>
+			<h1>Assets</h1>
+			<p>Import</p>
+			<p>Delete</p>
+		</div>
+		<div class='section'>
+			<h1>Object</h1>
+			<p id='new-obj'>New</p>
+			<p>Delete</p>
+		</div>
+	</div>
+
+		<!--Editor Panels -->
+		<div class='app-cont grow flex-c'>
+			<!-- Canvas -->
+			<div class='padded flex-c grow'>
+				<h1>Editor</h1>
+				<div class='content flex-scrolled-y flex-r ac jc'>
+					<canvas id='editor-canvas'></canvas>
+				</div>
+			</div>
+
+			<!-- timeline -->
+			<div class='padded flex-c timeline-cont'>
+				<h1>Timeline</h1>
+				<div class='content grow'></div>
+			</div>
+		</div>
+
+		<!--Interface Panels -->
+		<div class='app-cont flex-c interface'>
+			<!-- navigation -->
+			<div class='padded flex-c app-navi'>
+				<h1>Navigation</h1>
+				<div class='content grow padded-n flex'>
+					<!-- Scene -->
+					<div class='nav-list'>
+						<div class='drop-btn'>
+							<p class='status padded-n'>&#9658;</p>
+							<p class='padded-n'>Scenes</p>
+						</div>
+						<ul id='scene-list' class='list'>
+						</ul>
+					</div>
+
+					<!-- Tiles -->
+					<div class='nav-list'>
+						<div class='drop-btn'>
+							<p class='status padded-n'>&#9658;</p>
+							<p class='padded-n'>Tiles</p>
+						</div>
+						<ul id='tile-list' class='list'>
+						</ul>
+					</div>
+
+					<!-- Tiles -->
+					<div class='nav-list'>
+						<div class='drop-btn'>
+							<p class='status padded-n'>&#9658;</p>
+							<p class='padded-n'>Objects</p>
+						</div>
+						<ul id='object-list' class='list'>
+						</ul>
+					</div>
+	
+				</div>
+			</div>
+			<!-- details -->
+			<div class='padded flex-c grow'>
+				<h1>Details</h1>
+				<div class='content grow'></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class='log-section'>
+		<ul id='logger'></ul>		
+	</div>
+</div>

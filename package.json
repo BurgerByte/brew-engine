@@ -1,0 +1,16 @@
+{
+  "name": "extraction",
+  "version": "1.0.0",
+  "description": "JS Game IDE",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "start": "node index.js"
+  },
+  "author": "Steven Boyd",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}

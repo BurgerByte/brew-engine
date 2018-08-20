@@ -1,0 +1,133 @@
+/* application css*/
+@keyframes moveCheckered { 
+	from{ background-position: 0 0; }
+	to { background-position: 100% 100%; }
+}
+
+div.checkered { 
+	width: 100%; height: 100%;
+	position: absolute;
+	background-image: url('/images/checkered.png');
+	background-position: 0px 0px;
+	background-repeat: repeat;
+	animation: moveCheckered 50s linear infinite;
+}
+
+@keyframes toGreen {
+	from { background-color: #CC0; }
+	to { background-color: #0C0; }
+}
+
+.tint-y { 
+	position: absolute; width: 100%; height: 100%;
+	background-color: #CCCC00;
+	mix-blend-mode: overlay;
+	animation: toGreen 1s linear;
+	animation-fill-mode: forwards;
+}
+
+body{ font-family: Tahoma; }
+
+.full { width: 100%; height: 100%; }
+.flex-c { display: flex; flex-flow: column nowrap; }
+.flex-r { display: flex; flex-flow: row nowrap; }
+.flex-scrolled-y { flex: 1 1 auto; overflow-y: auto; height: 0px; }
+.flex-scrolled-x {  display: flex; flex-wrap: nowrap; overflow-x: auto;}
+.fscroll-x { flex: 0 0 auto; }
+.grow { flex: 1; }
+
+.taskbar {  background-color: #FFFFFA; color: #909090; }
+.taskbar > p { padding: 8px;  }
+
+.app { background-color: #222; }
+
+#logger { 
+	background-color: #CCCCD3; color: #33334F; padding: 3px; min-height: 12px;
+	font-family: monospace;
+}
+#logger > li { display: none; }
+#logger > li:last-child { display: block; }
+
+#menu-btn { cursor: pointer; display: inline-block; }
+#menu-btn:hover { background-color: #DDDDD0; }
+
+.dark { background-color: #444; }
+
+.interface { width: 300px; background-color: #222; }
+.ac { align-items: center; }
+.jc { justify-content: center; }
+.js { justify-content: space-between; }
+
+.timeline-cont { 
+	height: 180px; 
+}
+
+.app-cont { margin-right: 2px; }
+
+.app-cont h1{ 
+	display: inline-block; padding: 4px; background-color: #3F3F3F; color: white;
+	max-width: 80px;
+}
+
+.app-navi { height: 300px; overflow-y: auto;}
+
+.app-cont .content { background-color: #555; }
+.padded { padding: 1px; }
+.padded-n { padding: 5px; }
+
+.app-navi > .content { overflow: auto; }
+.nav-list { color: white; }
+.nav-list .list {margin-left: 40px; }
+.nav-list .list > li { padding: 4px; cursor: pointer;}
+.status { display: inline-block; }
+.float-r { float: right; }
+.float-l { float: left; }
+
+.drop-btn { cursor: pointer; clear: both; display: flex; }
+
+#menu { 
+	width: 0; background-color: #DDD; color: #777;
+	transition: width 500ms ease-in-out; overflow: hidden;
+}
+#menu.on { width: 180px; }
+#menu h1 { padding: 4px; font-size: 1.1em;  color: #333;}
+#menu p { padding: 8px; cursor: pointer; }
+#menu p:hover { color: white; }
+#menu .section:nth-child(1) > p:hover { background-color: #7A8;  }
+#menu .section:nth-child(2) > p:hover { background-color: #A78;  }
+#menu .section:nth-child(3) > p:hover { background-color: #87A;  }
+#menu .section:nth-child(4) > p:hover { background-color: #F95;  }
+#menu .section { border-bottom: 1px solid #C0C0C0; }
+
+.over-pane { 
+	z-index: 5; position: absolute; top:0; left:0; 
+	width: 100%; height: 100%; display: none;
+}
+.overlay { 
+	width: 100%; height: 100%; background-color: rgba(0,0,0,0.45);
+}
+
+.attention { 
+	display: none; background-color: #FF9999; color: white; 
+	position: absolute;
+}
+
+.prompt {
+	position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%);
+	display: flex; flex-flow: column nowrap; min-height: 150px; width: 400px;
+	background-color: white; box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+.prompt h1 { padding: 4px; color:white; background-color: #203F40; }
+.prompt p { padding: 8px; }
+.prompt div { padding: 3px; }
+.prompt button { padding: 8px; width: 80px;  }
+.prompt div.alert { color: red; padding: 2px; }
+input.invalid { background-color: #FCC; }
+
+canvas { background-image: url('/images/Checkered.png'); }
+#editor-canvas { 
+	border: 1px solid black; min-width: 200px; min-height: 200px;
+	width: 800px; height: 480px; box-shadow: 4px 4px 4px rgba(0,0,0,0.5);
+	display: none;
+}
